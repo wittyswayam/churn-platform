@@ -144,7 +144,7 @@ churn-platform/
 ### Local (no Docker)
 
 ```bash
-git clone https://github.com/your-org/churn-platform.git
+git clone https://github.com/wittyswayam/churn-platform.git
 cd churn-platform
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
