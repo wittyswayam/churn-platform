@@ -282,22 +282,6 @@ To report a bug, open a GitHub Issue including your Python version, operating sy
 
 ---
 
-## 9. Roadmap
-
-| Status | Feature |
-|---|---|
-| Planned | **SHAP explainability endpoint** - per-prediction feature attribution scores surfaced via the REST API; a working notebook prototype already exists in `notebooks/explainability.ipynb` |
-| Planned | **XGBoost baseline model** - the dependency stub is already present and commented in `requirements.txt`; adds a gradient-boosted tree comparison to the full benchmark suite |
-| Planned | **Distributed training with Ray Train** - stub present in requirements; enables multi-GPU and multi-node training for datasets that exceed single-machine memory limits |
-| Planned | **Automated retraining trigger** - when the PSI drift score exceeds 0.25 across three consecutive check windows, automatically submit and monitor a new training job |
-| Planned | **A/B serving layer** - a weighted Kubernetes `Service` object routing a configurable percentage of live production traffic to a challenger model alongside the reigning champion |
-| Known Issue | `search.plot_optimisation()` requires the `kaleido` package for PNG export; install it separately with `pip install kaleido` if chart generation fails |
-| Known Issue | TensorFlow 2.15 may rename the AUC metric key from `val_auc` to `val_auc_1` depending on Keras version; the HPO objective handles this defensively by scanning key prefixes |
-| Optimisation | Replace the pickle-based scaler serialisation artifact with an ONNX preprocessing graph for fully language-agnostic, runtime-portable preprocessing across polyglot serving stacks |
-| Optimisation | Add a Redis-backed prediction cache keyed on the raw input hash to short-circuit redundant model inference calls under sustained high request load |
-
----
-
 ## License
 
 MIT (c) [wittyswayam](https://github.com/wittyswayam)
